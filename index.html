@@ -87,7 +87,7 @@
 
  <!--slide-->
       
- <div class="home-slider owl-carousel js-fullheight" style="max-height:1340px !important;">
+ <div class="home-slider owl-carousel js-fullheight" style="max-height:1440px !important;">
 <div class="slider-item js-fullheight" style="max-height:1300px !important; justify-content: center;">
   <img src="./img/service.png" style="position:absolute;z-index: -1;object-fit: cover;filter:brightness(0.4);height:100vh;">
   <div class="overlay"></div>
@@ -95,12 +95,9 @@
 <div class="container">
 <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" style="max-height:1300px !important;text-align: -webkit-center;">
 <div class="col-md-12 ftco-animate">
-<div class="text w-100 text-center" >
+<div class="text w-100 text-center" ><br><br>
 <h2 style="font-size:24px;">🌈2023년 하반기🌈<br>수임을 쭉쭉 일으키는<br>변호사 마케팅</h2><br><br>
-<h1 class="mb-3 wow fadeInUp" style="line-height:160%;">전략 보고서 무료 배포<br><형사, 이혼, 부동산></h1><br><h3>날이 갈수록 더욱 더 치열해지는<br>법률시장을 파훼하기 위한<br><br>2023년 하반기 (6월 ~ <script language="javascript" type="text/javascript">
-  today = new Date()
-  document.write(today.getMonth() + 1);
-</script>월)<br><u>실제 수임을 일으키는<br>변호사 마케팅 전략 보고서<br>(⭐분야별 실제 성과사례 첨부⭐)</u><br><br>100% 무료로 배포합니다.</h3>
+<h1 class="mb-3 wow fadeInUp" style="line-height:160%;">전략 보고서 무료 배포<br><형사, 이혼, 부동산></h1><br><h3>날이 갈수록 더욱 더 치열해지는<br>법률시장을 파훼하기 위한<br><br>2023년 하반기 (6월 ~ <span id="monthInfo"></span>월)<br><u>실제 수임을 일으키는<br>변호사 마케팅 전략 보고서<br>(⭐분야별 실제 성과사례 첨부⭐)</u><br><br>100% 무료로 배포합니다.</h3>
 
 
 
@@ -279,6 +276,32 @@
   <!-- Uncomment below i you want to use a preloader -->
   <!-- <div id="preloader"></div> -->
 
+
+  <script>
+    // 현재 날짜 정보 가져오기
+    const today = new Date();
+    const today1 = new Date();
+    // 연도, 월, 일, 요일 정보 가져오기
+    const year = today.getFullYear();
+    const month = today.getMonth() + 1;
+    const month1 = today1.getMonth() + 1;
+    const lastDay = new Date(year, month, 0).getDate();
+  
+    // 요일을 한국어로 표시
+    const daysOfWeek = ['일', '월', '화', '수', '목', '금', '토'];
+    const dayOfWeek = daysOfWeek[today.getDay()];
+  
+    // 결과를 표시할 요소 선택
+    const dateInfo = document.getElementById('dateInfo');
+    const monthInfo = document.getElementById('monthInfo');
+  
+    // 결과 표시
+  
+    dateInfo.innerHTML = `✅ 신청기간 : ${year}년. ${month}. ${lastDay} (${dayOfWeek}) 모집 종료`;
+    monthInfo.innerHTML = `${month1}`;
+  </script>
+  
+
   <script src="js/plugins.js"></script>
     <script src="js/designesia.js"></script>
     <script src="js/countdown-custom.js"></script>
@@ -315,6 +338,7 @@
   <script>
     $('[name="entry.986316159"]').attr("value","메타 광고");
   </script>
+
 
 </body>
 </html>
